@@ -44,12 +44,6 @@ INSERT INTO `member` (`user_id`, `course_id`, `role`) VALUES
 (13, 3, 0),
 (14, 3, 0),
 (15, 3, 0);
-
--- --------------------------------------------------------
-
-
-
-
 INSERT INTO `user` (`user_id`, `name`) VALUES
 
 (1 ,'Taliesin'),
@@ -71,27 +65,3 @@ INSERT INTO `user` (`user_id`, `name`) VALUES
 
 
 
-/*
-Taliesin, si106, Instructor
-Denver, si106, Learner
-Juwairiyah, si106, Learner
-Kainui, si106, Learner
-Zoya, si106, Learner
-Aisha, si110, Instructor
-Artemis, si110, Learner
-Danna, si110, Learner
-Dennis, si110, Learner
-Tyler, si110, Learner
-Kirstin, si206, Instructor
-Allisha, si206, Learner
-Carra, si206, Learner
-Idahosa, si206, Learner
-Iliana, si206, Learner
-*/
-
-
-
-SELECT `User`.name, Course.title, Member.role
-    FROM `User` JOIN Member JOIN Course
-    ON `User`.user_id = Member.user_id AND Member.course_id = Course.course_id
-    ORDER BY Course.title, Member.role DESC, `User`.name
